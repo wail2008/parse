@@ -9,7 +9,7 @@ var methodOverride = require('method-override');
 var cookieSession = require('cookie-session');
 
 // Parse configuration
-var databaseUri = process.env.MONGO_URL = mongodb://heroku_1dn9w5bn:212uo0mukqcm8b86kc8oqc1um7@ds017886.mlab.com:17886;
+var databaseUri = process.env.MONGO_URL;
 var publicServerUrl = process.env.PUBLIC_SERVER_URL || 'http://localhost:1337/parse';
 var serverUrl = process.env.SERVER_URL || 'http://localhost:1337/parse';
 var appId = process.env.APP_ID || 'myAppId';
@@ -36,15 +36,15 @@ if (accessKeyId && secretAccessKey && bucketName) {
 }
 
 var api = new ParseServer({
-  databaseURI: databaseUri || 'mongodb://localhost:27017/dev',
+  databaseURI: databaseUri || 'mongodb://heroku_1dn9w5bn:212uo0mukqcm8b86kc8oqc1um7@ds017886.mlab.com:17886/heroku_1dn9w5bn’,
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
   appId: appId,
   masterKey: masterKey,
-  serverURL: serverUrl,
+  serverURL: https://schools-cms.herokuapp.com/,
   restAPIKey: restApiKey,
   filesAdapter: filesAdapter,
   verifyUserEmails: false,
-  publicServerURL: publicServerUrl,
+  publicServerURL: https://schools-cms.herokuapp.com/,
   appName: appName,
   emailAdapter: {
     module: 'parse-server-simple-mailgun-adapter',
