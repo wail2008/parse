@@ -9,9 +9,9 @@ var methodOverride = require('method-override');
 var cookieSession = require('cookie-session');
 
 // Parse configuration
-var databaseUri = mongodb://localhost/test;
-var publicServerUrl = schools-cms.herokuapp.com || 'http://localhost:1337/parse';
-var serverUrl = schools-cms.herokuapp.com || 'http://localhost:1337/parse';
+var databaseUri = mongodb://heroku_1dn9w5bn:212uo0mukqcm8b86kc8oqc1um7@ds017886.mlab.com:17886/heroku_1dn9w5bn;
+var publicServerUrl = http://schools-cms.herokuapp.com || ‘http://schools-cms.herokuapp.com';
+var serverUrl = http://chools-cms.herokuapp.com || ‘http://schools-cms.herokuapp.com';
 var appId = process.env.APP_ID || 'myAppId';
 var masterKey = process.env.MASTER_KEY || 'myMasterKey';
 var restApiKey = process.env.REST_API_KEY || 'myRestApiKey';
