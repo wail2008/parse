@@ -13,9 +13,9 @@ var databaseUri = process.env.MONGO_URL;
 var publicServerUrl = process.env.PUBLIC_SERVER_URL || 'http://localhost:1337/parse';
 var serverUrl = process.env.SERVER_URL || 'http://localhost:1337/parse';
 var appId = process.env.APP_ID || 'myAppId';
-var masterKey = process.env.MASTER_KEY || 'myMasterKey';
+var masterKey = process.env.MASTER_KEY || '6267109207';
 var restApiKey = process.env.REST_API_KEY || 'myRestApiKey';
-var appName = process.env.APP_NAME || 'My App Name';
+var appName = process.env.APP_NAME || ‘schools-cms’;
 
 // Mailgun configuration
 var apiKey = process.env.MAILGUN_API_KEY || 'MAILGUN_API_KEY';
