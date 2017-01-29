@@ -40,7 +40,7 @@ var api = new ParseServer({
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
   appId: process.env.APP_ID || 'myAppId',
   masterKey: process.env.MASTER_KEY || '',
-  serverURL: process.env.SERVER_URL || 'https://schools-cms.herokuapp.com',
+  serverURL: process.env.SERVER_URL || 'http://localhost:1337/parse',
   javascriptKey: process.env.JAVASCRIPT_KEY || '',  //** add this line no need to set values, they will be overwritten by heroku config vars
   restAPIKey: process.env.REST_API_KEY || '', //** add this line
   dotNetKey: process.env.DOT_NET_KEY || '', //** add this line
