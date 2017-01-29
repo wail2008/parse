@@ -36,11 +36,11 @@ if (accessKeyId && secretAccessKey && bucketName) {
 }
 
 var api = new ParseServer({
-  databaseURI: databaseUri || 'mongodb://localhost:27017/dev',
+  databaseURI: databaseUri || 'mongodb://heroku_1dn9w5bn:212uo0mukqcm8b86kc8oqc1um7@ds017886.mlab.com:17886/heroku_1dn9w5bn',
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
   appId: process.env.APP_ID || 'myAppId',
-  masterKey: process.env.MASTER_KEY || 'myMasterKey',
-  serverURL: process.env.SERVER_URL || 'http://localhost:1337',
+  masterKey: process.env.MASTER_KEY || '',
+  serverURL: process.env.SERVER_URL || 'https://schools-cms.herokuapp.com',
   javascriptKey: process.env.JAVASCRIPT_KEY || '',  //** add this line no need to set values, they will be overwritten by heroku config vars
   restAPIKey: process.env.REST_API_KEY || '', //** add this line
   dotNetKey: process.env.DOT_NET_KEY || '', //** add this line
