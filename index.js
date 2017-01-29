@@ -38,10 +38,13 @@ if (accessKeyId && secretAccessKey && bucketName) {
 var api = new ParseServer({
   databaseURI: databaseUri || 'mongodb://localhost:27017/dev',
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
-  appId: appId,
-  masterKey: masterKey,
-  serverURL: serverUrl,
-  restAPIKey: restApiKey,
+  appId: process.env.APP_ID || 'myAppId',
+  masterKey: process.env.MASTER_KEY || '6267109207',
+  serverURL: process.env.SERVER_URL || 'http://localhost:1337',
+  javascriptKey: process.env.JAVASCRIPT_KEY || '',  //** add this line no need to set values, they will be overwritten by heroku config vars
+  restAPIKey: process.env.REST_API_KEY || '', //** add this line
+  dotNetKey: process.env.DOT_NET_KEY || '', //** add this line
+  clientKey: process.env.CLIENT_KEY || '', //** add this line
   filesAdapter: filesAdapter,
   verifyUserEmails: false,
   publicServerURL: publicServerUrl,
