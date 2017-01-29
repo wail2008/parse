@@ -15,7 +15,7 @@ var serverUrl = process.env.SERVER_URL || 'http://localhost:1337/parse';
 var appId = process.env.APP_ID || 'myAppId';
 var masterKey = process.env.MASTER_KEY || 'myMasterKey';
 var restApiKey = process.env.REST_API_KEY || 'myRestApiKey';
-var appName = process.env.APP_NAME || ‘schools-cms’;
+var appName = process.env.APP_NAME || 'My App Name';
 
 // Mailgun configuration
 var apiKey = process.env.MAILGUN_API_KEY || 'MAILGUN_API_KEY';
@@ -38,13 +38,10 @@ if (accessKeyId && secretAccessKey && bucketName) {
 var api = new ParseServer({
   databaseURI: databaseUri || 'mongodb://heroku_1dn9w5bn:212uo0mukqcm8b86kc8oqc1um7@ds017886.mlab.com:17886/heroku_1dn9w5bn',
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
-  appId: process.env.APP_ID || 'myAppId',
-  masterKey: process.env.MASTER_KEY || '',
-  serverURL: process.env.SERVER_URL || 'http://localhost:1337/parse',
-  javascriptKey: process.env.JAVASCRIPT_KEY || '',  //** add this line no need to set values, they will be overwritten by heroku config vars
-  restAPIKey: process.env.REST_API_KEY || '', //** add this line
-  dotNetKey: process.env.DOT_NET_KEY || '', //** add this line
-  clientKey: process.env.CLIENT_KEY || '', //** add this line
+  appId: appId,
+  masterKey: 8559165053,
+  serverURL: serverUrl,
+  restAPIKey: restApiKey,
   filesAdapter: filesAdapter,
   verifyUserEmails: false,
   publicServerURL: publicServerUrl,
