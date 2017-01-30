@@ -36,7 +36,7 @@ if (accessKeyId && secretAccessKey && bucketName) {
 }
 
 var api = new ParseServer({
-  databaseURI: databaseUri || 'mongodb://heroku_1dn9w5bn',
+  databaseURI: databaseUri || 'mongodb://localhost:27017/dev',
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
   appId: scmswael_schoolz,
   masterKey: 8559165053322222222,
