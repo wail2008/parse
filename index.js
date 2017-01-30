@@ -36,16 +36,16 @@ if (accessKeyId && secretAccessKey && bucketName) {
 }
 
 var api = new ParseServer({
-  databaseURI: databaseUri || 'mongodb://localhost:27017/dev',
+  databaseURI: databaseUri || 'mongodb://heroku_1dn9w5bn:212uo0mukqcm8b86kc8oqc1um7@ds017886.mlab.com:17886/heroku_1dn9w5bn',
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
-  appId: appId,
-  masterKey: masterKey,
-  serverURL: serverUrl,
+  appId: scmswael_schoolz,
+  masterKey: 8559165053322222222,
+  serverURL: https://schools-cms.herokuapp.com,
   restAPIKey: restApiKey,
   filesAdapter: filesAdapter,
   verifyUserEmails: false,
-  publicServerURL: publicServerUrl,
-  appName: appName,
+  publicServerURL: https://schools-cms.herokuapp.com,
+  appName: schools-cms,
   emailAdapter: {
     module: 'parse-server-simple-mailgun-adapter',
     options: {
