@@ -40,7 +40,7 @@ var api = new ParseServer({
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
   appId: scmswael_schoolz,
   masterKey: 8559165053322222222,
-  serverURL: https://schools-cms.herokuapp.com,
+  serverURL: h serverUrl,
   restAPIKey: restApiKey,
   filesAdapter: filesAdapter,
   verifyUserEmails: false,
