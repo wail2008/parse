@@ -44,7 +44,7 @@ var api = new ParseServer({
   restAPIKey: restApiKey,
   filesAdapter: filesAdapter,
   verifyUserEmails: false,
-  publicServerURL: https://schools-cms.herokuapp.com,
+  publicServerURL: publicServerUrl,
   appName: schools-cms,
   emailAdapter: {
     module: 'parse-server-simple-mailgun-adapter',
